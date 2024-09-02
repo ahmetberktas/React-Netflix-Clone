@@ -1,5 +1,83 @@
 body {
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #111;
   min-height: 100vh;
+}
+
+
+header {
+  position: relative;
+  z-index: 100;
+}
+
+.custom-btn {
+  background-color: rgb(229, 9, 20);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  box-shadow: none;
+  line-height: 14px;
+  min-height: 32px;
+}
+
+.custom-btn:hover {
+  background-color: #c21317;
+}
+
+.custom-select {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 14px;
+  font-weight: bold;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%23FFF" d="M2 0L0 2h4z" opacity="0.6"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 10px 10px;
+  padding-right: 30px;
+}
+
+.custom-select option {
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  color: #999;
+  padding: 40px 20px;
+}
+
+.footer a {
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .select-wrapper {
+  margin-top: 20px;
+}
+
+.hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/denemehero.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
 }
