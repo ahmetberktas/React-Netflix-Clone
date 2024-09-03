@@ -6,4 +6,6 @@ const options = {
   },
 };
 
-export default options;
+const baseImageURL = "https://image.tmdb.org/t/p/original";
+
+export default { options, baseImageURL };
