@@ -22,8 +22,17 @@ const movieReducer = (state = initialState, { type, payload }) => {
         isMoviesError: false,
         populerMovies: payload,
       };
+    case actionTypes.SET_GENRES_LOADING:
+      return { ...state, isGenresLoading: true };
+    case actionTypes.SET_GENRES_ERROR:
+      return { ...state, isGenresLoading: false, isGenresError: true };
     case actionTypes.SET_GENRES:
-      return { ...state };
+      return {
+        ...state,
+        isGenresLoading: false,
+        isGenresError: false,
+        genres: payload,
+      };
     default:
       return state;
   }
