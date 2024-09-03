@@ -121,3 +121,9 @@ header {
 .hero-card .btn {
   margin: 10px;
 }
+
+.movie {
+  max-width: 300px;
+  height: 100%;
+  cursor: pointer;
+}
