@@ -31,7 +31,7 @@ const Hero = () => {
               IMDB: {randomMovie.vote_average.toFixed(1)}
             </p>
             <div className="d-flex justify-content-center gap-3">
-              <Link className="custom-btn" to={"/detail"}>
+              <Link className="custom-btn" to={`/detail/${randomMovie.id}`}>
                 Film Detayları
               </Link>
               <Link className="custom-btn" to={"#"}>

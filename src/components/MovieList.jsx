@@ -4,6 +4,7 @@ import constants from "../constants/constants";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Loading from "./Loading";
+import { Link } from "react-router-dom";
 
 const MovieList = ({ genre }) => {
   const [movies, setMovies] = useState(null);
@@ -18,8 +19,6 @@ const MovieList = ({ genre }) => {
       .catch((err) => console.error(err));
   }, [genre.id]);
 
-  console.log(movies);
-
   return (
     <div className="p-4">
       <h2 className="mt-5">{genre.name}</h2>
@@ -33,11 +32,13 @@ const MovieList = ({ genre }) => {
         {movies ? (
           movies.map((movie) => (
             <SplideSlide key={movie.id}>
-              <img
-                className="movie"
-                src={constants.baseImageURL.concat(movie.poster_path)}
-                alt={movie.title}
-              />
+              <Link to={`/detail/${movie.id}`}>
+                <img
+                  className="movie"
+                  src={constants.baseImageURL.concat(movie.poster_path)}
+                  alt={movie.title}
+                />
+              </Link>
             </SplideSlide>
           ))
         ) : (
